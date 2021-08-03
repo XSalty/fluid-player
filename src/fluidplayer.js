@@ -557,6 +557,16 @@ const fluidPlayerClass = function () {
         if (!!self.displayOptions.layoutControls.loop) {
             self.switchToMainVideo();
             self.playPauseToggle();
+        } else {
+            if (self.fullscreenMode && !self.fullscreenRemoved) {
+                self.fullscreenRemoved = true;
+                self.fullscreenToggle();
+            }
+        }
+
+        const blockOnPause = document.getElementById(self.videoPlayerId + '_fluid_html_on_pause');
+        if (blockOnPause && !self.isCurrentlyPlayingAd) {
+            blockOnPause.style.display = "flex"
         }
     };
 

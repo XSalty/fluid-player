@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Block</title>
+    <%= htmlWebpackPlugin.tags.headTags %>
+    <style lang="css">
+        #fluid-player-e2e-case {
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+
+<video id="fluid-player-e2e-case">
+    <source src='https://1.cdnxsalty9.com:8081/6/2/f/62f5198b-9958-43a5-b71b-f8e143947c5c_240p.mp4' title="240p" type='video/mp4'/>
+</video>
+
+<%= htmlWebpackPlugin.tags.bodyTags %>
+
+<script>
+    var instance = fluidPlayer('fluid-player-e2e-case', {
+        layoutControls: {
+            primaryColor: "#dd2e44",
+            timelinePreview: {
+                file: '/static/thumbnails.vtt',
+                type: 'VTT'
+            },
+            fillToControls: true,
+            posterImage: '/static/video-thumbnail.jpg',
+            playbackRateEnabled: true,
+            allowDownload: true,
+            autoPlay: false,
+            playButtonShowing: true,
+            playPauseAnimation: true,
+            htmlOnPauseBlock: {
+                html: '<button>hello world</button>',
+                height: 100,
+                width: 200
+            },
+        }
+    });
+</script>
+
+</body>
+</html>
