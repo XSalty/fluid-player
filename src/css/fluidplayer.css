@@ -350,26 +350,28 @@
 }
 */
 .fluid_initial_play {
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
     cursor: pointer;
+    background-color: rgba(31, 31, 31, 0.6)
 }
 
 .fluid_initial_play_button {
-    margin-top: 15px;
-    margin-left: 23px;
+    margin-top: 25px;
+    margin-left: 38px;
     border-style: solid;
-    border-width: 15px 0 15px 21px;
+    border-width: 25px 0 25px 39px;
     border-color: transparent transparent transparent #ffffff;
+    opacity: .8
 }
 
 .fluid_initial_pause_button {
-    margin-top: 15px;
-    margin-left: 17px;
-    width: 8px;
-    height: 31px;
-    border: 9px solid white;
+    margin-top: 34px;
+    margin-left: 36px;
+    width: 10px;
+    height: 32px;
+    border: 10px solid white;
     border-top: 0;
     border-bottom: 0;
 }
