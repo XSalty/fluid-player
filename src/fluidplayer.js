@@ -2103,7 +2103,7 @@ const fluidPlayerClass = function () {
                 self.domRef.player.play();
             } else {
                 self.domRef.player.pause();
-                self.controlPlayPauseToggle(self.videoPlayerId);
+                //self.controlPlayPauseToggle(self.videoPlayerId);
             }
 
             self.isSwitchingSource = false;
