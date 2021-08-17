@@ -1492,6 +1492,8 @@ export default function (playerInstance, options) {
 
             } else {
                 openClickthrough();
+                playerInstance.domRef.player.removeEventListener('timeupdate', playerInstance.decreaseSkipOffset);
+                playerInstance.pressSkipButton()
                 playerInstance.domRef.player.pause();
             }
         };

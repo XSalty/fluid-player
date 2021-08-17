@@ -1497,6 +1497,7 @@ const fluidPlayerClass = function () {
     };
 
     self.initialPlay = () => {
+        self.toggleLoader(true);
         self.domRef.player.addEventListener('playing', () => {
             self.toggleLoader(false);
         });
@@ -1904,7 +1905,11 @@ const fluidPlayerClass = function () {
     self.setLayout = () => {
         //All other browsers
         const listenTo = (self.isTouchDevice()) ? 'touchend' : 'click';
-        self.domRef.player.addEventListener(listenTo, () => self.playPauseToggle(), false);
+        self.domRef.player.addEventListener(listenTo, () => {
+            if (!self.firstPlayLaunched || self.domRef.player.paused) {
+                self.playPauseToggle();
+            }
+        }, false);
         //Mobile Safari - because it does not emit a click event on initial click of the video
         self.domRef.player.addEventListener('play', self.initialPlay, false);
         self.setDefaultLayout();
