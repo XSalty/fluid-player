@@ -1,6 +1,6 @@
 #!/bin/sh
 
-var VERSION=`date +%s`
+VERSION=`date +%s`
 sed -i "s/__VERSION__/$VERSION/g" ./test/preview.html
 cp ./test/preview.html /mnt/img1/home/api/media/xplayer/index.html
 mkdir /mnt/img1/home/api/media/xplayer/static
