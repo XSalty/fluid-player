@@ -9,7 +9,7 @@
 			<Impression>http://www.example.com/impression</Impression>
 			<Creatives>
 				<Creative sequence="1">
-					<Linear skipoffset="00:00:03">
+					<Linear skipoffset="00:00:05">
 						<Duration>00:00:10</Duration>
 						<TrackingEvents>
 							<Tracking event="start">http://www.example.com/start</Tracking>
@@ -28,7 +28,7 @@
 						</TrackingEvents>
 						<AdParameters>
 							<![CDATA[
-{"videos":[ {"url":"https://googleads.github.io/googleads-ima-html5/media/LinearVPAIDCreative.mp4","mimetype":"video/mp4"}]}
+{"videos":[ {"url":"http://localhost:8080/static/LinearVPAIDCreative.mp4","mimetype":"video/mp4"}]}
 ]]>
 						</AdParameters>
 						<VideoClicks>

@@ -1217,6 +1217,7 @@ const fluidPlayerClass = function () {
         };
 
         const onProgressbarMouseMove = event => {
+            console.log('mouse move');
             const currentX = self.getEventOffsetX(event, event.target.parentNode);
             initialPosition = NaN; // mouse up will fire after the move, we don't want to trigger the initial position in the event of iOS
             shiftTime(currentX);
@@ -1580,7 +1581,7 @@ const fluidPlayerClass = function () {
                 && browserVersion.browserName === 'Google Chrome';
 
             if ('Safari' === browserVersion.browserName || isChromeAndroid) {
-                self.domRef.player.src = 'https://cdn.fluidplayer.com/static/blank.mp4';
+                //self.domRef.player.src = 'https://cdn.fluidplayer.com/static/blank.mp4';
                 self.domRef.player.play();
                 self.playPauseAnimationToggle(true);
             }
